@@ -46,7 +46,7 @@ const requestListener = (req, res) => {
     if (body) {
       res.end(JSON.stringify(body));
     } else {
-      res.end(JSON.stringify({error: 'User with following id does not exist'}));
+      res.end(JSON.stringify({error: `User with following id: ${id} does not exist`}));
     }
   } else {
     res.end(JSON.stringify({error: 'Following adress does not exist'}));
